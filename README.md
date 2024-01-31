@@ -1,0 +1,1 @@
+This project contains 2 main models: the PyTorch model and the TensorFlow model. Both model are trained on different datasets. The TensorFlow model is more accurate and the flask code works just fine. The PyTorch model will require some more work.
