@@ -34,7 +34,7 @@ class MRI(Dataset):
         tumor = []
         healthy = []
         # cv2 - It reads in BGR format by default
-        for f in glob.iglob(r"Project\BrainTumorDetection\Dataset\Yes_Data/*.jpg"):
+        for f in glob.iglob(r"Projects\BrainTumorDetection\Dataset\Yes_Data/*.jpg"):
             img = cv2.imread(f)
             img = cv2.resize(img,(128,128)) # I can add this later in the boot-camp for more adventure
             b, g, r = cv2.split(img)
@@ -42,7 +42,7 @@ class MRI(Dataset):
             img = img.reshape((img.shape[2],img.shape[0],img.shape[1])) # otherwise the shape will be (h,w,#channels)
             tumor.append(img)
 
-        for f in glob.iglob(r"Project\BrainTumorDetection\Dataset\No_data/*.jpg"):
+        for f in glob.iglob(r"Projects\BrainTumorDetection\Dataset\No_data/*.jpg"):
             img = cv2.imread(f)
             img = cv2.resize(img,(128,128)) 
             b, g, r = cv2.split(img)

@@ -9,11 +9,11 @@ from keras.preprocessing import image
 import tensorflow as tf
 
 app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = r'Project\BrainTumorDetection\static\uploads'
+app.config['UPLOAD_FOLDER'] = r'Projects\BrainTumorDetection\static\uploads'
 app.config['ALLOWED_EXTENSIONS'] = {'jpg'}
 
 # Load the trained model
-model_path = r'Project\BrainTumorDetection\brain-tumor1.h5'  # Replace with the actual path to your trained model
+model_path = r'Projects\BrainTumorDetection\brain-tumor1.h5'  # Replace with the actual path to your trained model
 model = load_model(model_path)
 
 # Preprocess image for prediction
